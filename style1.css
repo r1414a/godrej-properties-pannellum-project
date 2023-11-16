@@ -1,0 +1,391 @@
+@media only screen and (max-width: 667px){
+    div.custom-hotspot span{
+         border-left: 4px solid #fff !important; 
+         font-size: 9px !important;
+         margin-top: -25px !important;
+     }
+    div.custom-hotspot-roadname span{
+         border-left: 4px solid #fff !important; 
+         font-size: 9px !important;
+         margin-top: -25px !important;
+     }
+     .spot2{
+        width: 5px !important;
+        height: 5px !important;
+     }
+     .spot2::before{
+        top: -3px !important;
+        left: -3px !important;
+        width: 8px !important;
+        height: 8px !important;
+        border: 2px solid #ffffff !important;
+     }
+     .location{
+        width: 5px !important;
+        height: 5px !important;
+     }
+     .location::before{
+        top: -3px !important;
+        left: -3px !important;
+        width: 8px !important;
+        height: 8px !important;
+        border: 2px solid #ffffff !important;
+     }
+     .hotspot_text{
+        background-size: 40% !important;
+     }
+    label{
+        left: 45px !important;
+    }
+    #sceneSelect{
+        padding: 7px 20px;
+    }
+    .pnlm-compass.pnlm-controls.pnlm-control{
+        width: 55px !important;
+        height: 55px !important;
+        top: 70px !important;
+    }
+    .pnlm-compass::before{
+        width: 152px !important; 
+        height: 152px !important;
+        top: -49px !important;
+        right: -45px !important;
+    }
+    /* .pnlm-load-box p{
+        font-size: 50px !important;
+    } */
+}  
+
+@media only screen and (min-width: 667px){
+    div.custom-tooltip span{
+        font-size: 13px !important;
+    }
+    .hotspot_text{
+        background-size: 60% !important;
+     }
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+#panorama{
+    width: 100vw;
+    height: 100vh;
+}
+
+/*Styles for compass*/
+.pnlm-compass.pnlm-controls.pnlm-control{
+    z-index: 999;
+    top: 50px;
+    right: 50px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-image: url(./images/compass_pointer.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pnlm-compass::before{
+    content: "";
+    z-index: 999;
+    position: absolute;
+    top: -56px;
+    right: -52px;
+    width: 175px;
+    height: 175px;
+    background-image: url(./images/compass_plate.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/*Styles for hotspots*/
+
+
+.spot2{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/*Styles for hotspot pointer*/
+
+.spot2::before{
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    scale: 0.5;
+    border-radius: 50%;
+    background-color:  transparent;
+    border: 3px solid #ffffff;
+    animation: spread 1.5s linear infinite;
+}
+
+
+/*Styles for hotspots for hyatt hotel & army sports institute*/
+
+
+.location{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/*Styles for hotspot pointer*/
+
+.location::before{
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    scale: 0.5;
+    border-radius: 50%;
+    background-color:  transparent;
+    border: 3px solid #ffffff;
+    animation: spread 1.5s linear infinite;
+}
+
+
+@keyframes spread{
+
+    0% 
+    {
+        transform: translateX(0);
+        opacity: 1;
+        scale: 0;
+    }
+    10%, 90% 
+    {
+        transform: translateX(-1px);
+    }
+    20%, 80% 
+    {
+        transform: translateX(1px);
+    }
+    30%, 50%, 70% 
+    {
+        transform: translateX(-1px);
+        opacity: 1;
+    }
+    40%, 60% 
+    {
+        transform: translateX(1px);
+    }
+    100% 
+    {
+        transform: translateX(0);
+        opacity: 0.3;
+        scale: 1.3;
+    }
+}
+
+label{
+    z-index: 99;
+    position: absolute;
+    top: 20px;
+    left: 120px;
+}
+
+#sceneSelect{
+    padding: 10px 35px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+#sceneSelect option{
+    font-size: 16px;
+}
+
+
+/*hide kalyani nagar & viman Nagar*/
+div.custom-hotspot span {
+  	margin-top: -35px;
+    border-left: 8px solid white;
+    background-color: #252424;
+    background-image: linear-gradient(to right #414141, 50% #7D7D7D);
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Inter';
+    text-align: center;
+    padding: 4px 6px;
+}
+div.custom-hotspot-roadname span {
+  	margin-top: -35px;
+    border-left: 8px solid white;
+    background-color: #252424;
+    background-image: linear-gradient(to right #414141, 50% #7D7D7D);
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Inter';
+    text-align: center;
+    padding: 4px 6px;
+}
+
+/*add location image*/
+.hotspot_text{
+    height: 150px;
+    margin-top: -110px;
+    margin-left: -25px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+
+/*loading animation style*/
+.pnlm-load-box{
+    background-color: transparent !important;
+    left: 45% !important;
+   
+}
+
+.pnlm-load-box p {
+    /* font-size: 90px;
+    color: black; */
+    display: none !important;
+}
+
+.pnlm-load-box .pnlm-lbox{
+    display: none !important;
+}
+
+.pnlm-load-box .pnlm-lbar{
+    display: none !important;
+}
+
+.pnlm-load-box .pnlm-lmsg{
+    display: none !important;
+}
+
+
+/*Loading animation styles*/
+/* .elementor-editor-active #loader-wrapper {
+  display: none;
+} */
+
+/* Preloader from this codepen : https://codepen.io/niyazpoyilan/pen/PGQKZK , adapted for easy use in Elementor */
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10009;
+  }
+  #loader {
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 3px solid transparent;
+    border-top-color: white;
+    border-radius: 100%;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    z-index: 1001;
+  }
+  #loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 3px solid transparent;
+    border-top-color: #006bff;
+    border-radius: 100%;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+  }
+  #loader:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    border: 3px solid transparent;
+    border-top-color: #00f4ff;
+    border-radius: 100%;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+  }
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  #loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    background: #0000004d;
+    width: 50%;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  #loader-wrapper .loader-section.section-left {
+    left: 0;
+  }
+  #loader-wrapper .loader-section.section-right {
+    right: 0;
+  }
+  
+  /* Loaded Styles */
+  .vanilla-preloader #loader-wrapper .loader-section.section-left {
+    transform: translateX(-100%);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .vanilla-preloader #loader-wrapper .loader-section.section-right {
+    transform: translateX(100%);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .vanilla-preloader #loader {
+      opacity: 0;
+    transition: all 0.3s ease-out;
+  }
+  .vanilla-preloader #loader-wrapper {
+      visibility: hidden;
+    transform: translateY(-100%);
+    transition: all 0.3s 1s ease-out;
+  }
+  
